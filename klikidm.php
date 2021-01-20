@@ -26,7 +26,7 @@ $nomer = trim(fgets(STDIN));
 			echo "PROSES DAFTAR ... \n";
 			$reg3 = curl('https://account-api-v1.klikindomaret.com/api/Customer/Registration?districtID=2483&mfp_id=1', '{"nomor":"","isVaildPhoneNo":false,"messageError":"","Mobile":"'.$nomer.'","Email":null,"FName":"'.$nama.'","LName":"'.$nama2.'","Password":"akucintakamu","ConfirmPassword":"akucintakamu","IsConfirmed":true,"valueDate":"","isLoading":false,"ID":"00000000-0000-0000-0000-000000000000","IPAddress":"192.168.56.131","IsSubscribed":0,"IsNewsLetterSubscriber":0,"AllowSMS":false,"LastUpdate":"0001-01-01T00:00:00","DateOfBirth":"1993-03-'.rand(01, 30).'T00:00:00.000Z","Gender":"Wanita","DateOfBirthStringFormatted":"1993-03-'.rand(01, 30).'","TypePushEmail":0,"IsUpload":false,"IsActivated":false,"MobileVerified":true,"DateOfBirthExists":"0001-01-01T00:00:00","OTPValidationExpired":false,"IsFromOtherSystem":false,"OTPCount":0,"OTPAvailable":0,"IsNewAccount":true,"Origin":"Registrasi Website"}', $headers);
 			if (strpos($reg3[1], '"Message":"Success"')) {
-				echo "SUKSES DAFTAR : $nomer | cuan123 \n";
+				echo "SUKSES DAFTAR : $nomer | akucintakamu \n";
 				echo "BUAT LAGI? (y/n): ";
 				$yn = trim(fgets(STDIN));
 				if ($yn == 'y') goto regis;
